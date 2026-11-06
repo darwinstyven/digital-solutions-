@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">   
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Digital Solutions | Tecnología e Innovación</title>
+<style>
+    body {
+        background-color: #101827;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+       margin: 0;
+       padding: 0;
+    }
+
+    h1 {
+        color: #38bdf8;
+    }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #0f172a;
+    border-bottom: 1px solid #38bdf8;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.boton-principal {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #101827;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 25px 0;
+    transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: #0ea5e9;
+}
+.tarjeta-servicio {
+    background-color: #1e293b;
+    border: 1px solid #38bdf8;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 400px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-servicio h3 {
+    color: #38bdf8;
+    font-size: 24px;
+}
+
+.tarjeta-servicio p {
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+#nosotros {
+    background: linear-gradient(135deg, #172554, #1e3a8a);
+    padding: 40px 25px;
+    margin: 50px auto;
+    max-width: 600px;
+    border: 1px solid #38bdf8;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#nosotros h2 {
+    color: #38bdf8;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#nosotros p {
+    color: #e2e8f0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+#contacto {
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    padding: 40px 25px;
+    margin: 20px auto;
+    max-width: 850px;
+    border: 1px solid #38bdf8;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#contacto h2 {
+    color: #38bdf8;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    color: #e2e8f0;
+    font-size: 17px;
+    line-height: 1.8;
+}
+.boton-whatsapp {
+  display: inline-block;
+  background: #25D366;
+  color: #ffffff;
+  padding: 16px 28px;
+  margin: 0 auto;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.25);
+  transition: transform 0.3s, background 0.3s;
+}
+
+#formulario-contacto {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+#formulario-contacto input,
+#formulario-contacto textarea {
+padding: 14px;
+border: 1px solid #334155;
+border-radius: 10px;
+background: #0f172a;
+color: #ffffff;
+font-size: 16px;
+outline: none;
+}
+#formulario-contacto textarea {
+min-height: 120px;
+}
+#formulario-contacto input:focus,
+#formulario-contacto textarea:focus {
+border-color: #38bdf8;
+box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+#formulario-contacto button {
+background: #38bdf8;
+color: #ffffff;
+border: none;
+padding: 14px 24px;
+border-radius: 10px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+transition: background 0.3s, transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+#formulario-contacto button:hover ,   
+.boton-whatsapp:hover {
+  background: #128C7E;
+color: white;
+box-shadow: 0 6px 18px rgba(18, 140, 126, 0.35);
+filter: brightness(1.08);
+  transform: translateY(-4px);
+}
+
+.boton-whatsapp:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 10px;
+        align-items: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    img {
+    max-width: 100%;
+    height: auto;
+}
+main {
+padding: 20px 15px;
+}
+#nosotros,
+#contacto {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
+#contacto form {
+width: 100%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+gap: 15px;
+display: flex;
+flex-direction: column;
+}
+#contacto input,
+#contacto textarea,
+#contacto button {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#contacto textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+#nosotros h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+#nosotros h3 {
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+#nosotros p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+}
+</style>
+</head>    
+<body>
+<header>
+    <h2>Digital Solutions</h2>
+    <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<main id="inicio">
+    <h1>Transformamos ideas en soluciones digitales</h1>
+<p>
+  Desarrollo web, aplicaciones inteligentes y
+  soluciones tecnológicas diseñadas para impulsar
+  negocios hacia el futuro.
+</p>
+<a href="#servicios" class="boton-principal">
+    Explorar servicios
+</a>
+<h2 id="servicios">Nuestras soluciones</h2>
+
+<p>Desarrollo Web | Aplicaciones | Inteligencia Artificial</p>
+
+<div class="tarjeta-servicio">
+    <h3>💻 Desarrollo Web</h3>
+    <p>
+        Creamos páginas web modernas,
+        rápidas y profesionales para
+        empresas y emprendedores.
+    </p>
+<a href="https://wa.me/573106230293?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Desarrollo%20Web"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="boton-whatsapp">
+   Solicitar información
+</a>
+</div>
+<div class="tarjeta-servicio">
+    <h3>🤖 Inteligencia Artificial</h3>
+    <p>
+        Desarrollamos soluciones inteligentes
+        que ayudan a las empresas a automatizar
+        procesos, mejorar su productividad
+        y aprovechar el poder de la inteligencia artificial.
+    </p>
+    <a href="https://wa.me/573106230293?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Inteligencia%20Artificial"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="boton-whatsapp">
+    Solicitar información
+</a>
+</div>
+
+
+<div class="tarjeta-servicio">
+    <h3>📱 Desarrollo de Aplicaciones</h3>
+    <p>
+        Diseñamos aplicaciones modernas,
+        seguras e innovadoras para ayudar
+        a empresas y emprendedores a
+        transformar sus ideas en
+        soluciones digitales.
+    </p>
+    <a href="https://wa.me/573106230293?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Desarrollo%20de%20Aplicaciones"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="boton-whatsapp">
+    Solicitar información
+</a>
+</div>
+<section id="nosotros">
+    <h2>¿Quiénes somos?</h2>
+
+    <p>
+        En Digital Solutions transformamos
+        ideas en soluciones tecnológicas
+        innovadoras. Nos especializamos
+        en desarrollo web, aplicaciones
+        e inteligencia artificial.
+    </p>
+
+    <h2>Nuestra misión</h2>
+
+    <p>
+        Ayudar a empresas y emprendedores
+        a crecer mediante herramientas
+        digitales modernas, seguras
+        y eficientes.
+    </p>
+</section>
+<section id="contacto">
+    <h2>📞 Contáctanos</h2>
+    <p>
+        ¿Tienes un proyecto en mente?
+        En Digital Solutions estamos listos
+        para ayudarte a transformar tus ideas
+        en soluciones tecnológicas.
+    </p>
+    <p>
+        Escríbenos y descubre cómo podemos
+        impulsar tu negocio con tecnología.
+    </p>
+<form id="formulario-contacto">
+<input type="text" name="nombre" placeholder="Tu nombre completo" required>
+<input type="email" name="correo" placeholder="Tu correo electrónico" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+<textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+<button type="submit">Enviar solicitud</button>
+</form>
+<p id="mensaje-formulario"></p>    
+</section>
+<a
+  href="https://wa.me/573106230293?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20Digital%20Solutions."
+  target="_blank"
+  rel="noopener noreferrer"
+  class="boton-whatsapp"
+>
+  💬 Escríbenos por WhatsApp
+</a>
+</main>
+<script>
+const formulario = document.getElementById("formulario-contacto");
+formulario.addEventListener("submit", function(evento) {
+evento.preventDefault();
+const nombre = formulario.elements["nombre"].value;
+const correo = formulario.elements["correo"].value;
+const mensaje = formulario.elements["mensaje"].value;
+const respuesta = document.getElementById("mensaje-formulario");
+respuesta.textContent = "¡Gracias, " + nombre + "! Tu solicitud fue recibida correctamente.";
+formulario.reset();
+const textoWhatsApp = `*NUEVA SOLICITUD - DIGITAL SOLUTIONS*\n\n*Nombre:* ${nombre}\n*Correo:* ${correo}\n*Proyecto:* ${mensaje}`;
+console.log(textoWhatsApp);
+const urlWhatsApp = "https://wa.me/573106230293?text=" + encodeURIComponent(textoWhatsApp);
+window.open(urlWhatsApp, "_blank");});
+</script>
+</body> 
+</html>
